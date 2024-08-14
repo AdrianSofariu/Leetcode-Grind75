@@ -36,6 +36,7 @@ public:
         //Use a dynamic programming approach.
         //We use an array where f[i] signals if the string can be split
         //into words until position i (including i).
+        //Complexity: O(n^2 + k) (considering the slicing takes k time where k is the maximum length of a word)
 
         //Fristly transform the vector into a set for better search complexity
         unordered_set<string> words(wordDict.begin(), wordDict.end());
