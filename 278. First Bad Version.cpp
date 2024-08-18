@@ -41,13 +41,14 @@ public:
         //Complexity: O(logn)
         int left = 1;
         int right = n;
+        int mid = left + (right - left)/2;
         while(left < right)
         {
-            int mid = left + (right - left)/2;
             if(isBadVersion(mid))
                 right = mid;
             else
                 left = mid + 1;
+            mid = left + (right - left)/2;
         }
         return left;
     }
