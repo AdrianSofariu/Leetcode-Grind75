@@ -54,6 +54,7 @@ public:
     bool canPartition(vector<int>& nums) {
         //First we compute the sum. If it is odd we cannot have a partition with equal sums.
         //Then we check if we have a partition of value sum/2.
+        //Complexity: O(n x sum)
         int sum = 0;
         for(int x : nums)
             sum += x;
