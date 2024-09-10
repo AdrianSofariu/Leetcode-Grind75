@@ -38,7 +38,7 @@ public:
     int coinChange(vector<int>& coins, int amount) {
         //We use a dynamic programming approach
         //For each value up to amount we compute the minimum nr of coins we need
-        //Complexity: O(amount) - space, Theta(amount x coins.size()) - time
+        //Complexity: O(amount) - space, O(amount x coins.size()) - time
 
         vector<int> dp(amount + 1, INT_MAX - 1);
 
