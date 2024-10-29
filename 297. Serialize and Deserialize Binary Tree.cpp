@@ -77,7 +77,7 @@ public:
         stringstream s(data);
         return deserializeUtil(s);
     }
-};*/
+};
 
 // Your Codec object will be instantiated and called as such:
 // Codec ser, deser;
