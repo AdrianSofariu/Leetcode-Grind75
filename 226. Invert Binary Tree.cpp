@@ -44,7 +44,7 @@ public:
 };
 
 //the practical solution
-//Complexity: O(n) - time, O(w) - w = maximum width of the tree (2^max level) 
+//Complexity: O(n) - time, O(n) - space
 #include <queue>
 
 class Solution {
