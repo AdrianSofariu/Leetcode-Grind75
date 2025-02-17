@@ -28,17 +28,13 @@ public:
 
         if(s.size() != t.size()) return false;
 
-        //add all characters of s and their counts
+        //add all characters of s and subtract the characters in t
         for(int i = 0; i < s.size(); ++i){
             dict[s[i]]++;
             dict[t[i]]--;
         }
 
-        //add all characters of t but also check for them to be only updates not insertions
-        for(char c: t){
-            
-        }
-
+        //check if some char is mapped to a non-zero value
         for(auto it : dict)
             if(it.second != 0)
                 return false;
