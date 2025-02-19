@@ -56,6 +56,22 @@ int partition(vector<vector<int>>& arr, int low, int high){
     return i + 1;
 }
 
+//modified hoare to also return the index of the pivot but it performs worse than lomuto at the time i was testing
+//may improve it in the future
+int partition(vector<vector<int>>& arr, int low, int high){
+    vector<int> piv = arr[low];
+    int pivot = distance(arr[low][0], arr[low][1]);
+
+    while(low < high){
+        while(low < high && distance(arr[high][0], arr[high][1]) >= pivot) high--;
+        arr[low] = arr[high];
+        while(low < high && distance(arr[low][0], arr[low][1]) <= pivot) low++;
+        arr[high] = arr[low];
+    }
+    arr[low] = piv;
+    return low;
+}
+
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
         int left = 0, right = points.size() - 1;
